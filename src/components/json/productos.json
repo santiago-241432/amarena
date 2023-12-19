@@ -1,0 +1,14 @@
+[
+    {"index":1, "nombre":"GRANOLA CON PASAS", "descripcion":"", "imagen":"https://i.ibb.co/9GcJ9mV/GRANOLA-CON-PASAS-1.jpg", "categoria":"CEREALES", "precio":1500, "stock": 9000},
+    {"index":2, "nombre":"ALMENDRAS CON CHOCOLATE", "descripcion":"", "imagen":"https://i.ibb.co/3fXXQCG/ALMENDRAS-CON-CHOCOLATE-1.jpg", "categoria":"CHOCOLATES-Y-GARRAPIÑADAS" , "precio":2500, "stock": 1000},
+    {"index":3, "nombre":"LENTEJAS DE CHOCOLATE", "descripcion":"", "imagen":"https://i.ibb.co/tPPGMcR/LENTEJAS-DE-CHOCOLATE-1.jpg", "categoria":"CHOCOLATES-Y-GARRAPIÑADAS", "precio":500, "stock": 5000},
+    {"index":4, "nombre":"MANI CON CHOCOLATE", "descripcion":"", "imagen":"https://i.ibb.co/j4m2KHR/MANI-CON-CHOCOLATE-1.jpg", "categoria":"CHOCOLATES-Y-GARRAPIÑADAS", "precio":1000, "stock": 7000},
+    {"index":5, "nombre":"PASAS CON CHOCOLATE", "descripcion":"", "imagen":"https://i.ibb.co/hmnv5x4/PASAS-CON-CHOCOLATE-1.jpg", "categoria":"CHOCOLATES-Y-GARRAPIÑADAS", "precio":1000, "stock": 7000},
+    {"index":6, "nombre":"MIX EUROPEO CON PASAS", "descripcion":"", "imagen":"https://i.ibb.co/GWHp7Ym/MIX-EUROPEO-CON-PASAS-1.jpg", "categoria":"FRUTOS-SECOS", "precio":2000, "stock": 6000},
+    {"index":7, "nombre":"MIX EUROPEO SIN PASAS", "descripcion":"", "imagen":"https://i.ibb.co/D9tzX7z/MIX-EUROPEO-SIN-PASAS-1.jpg", "categoria":"FRUTOS-SECOS", "precio":2000, "stock": 6000},
+    {"index":8, "nombre":"MIX TROPICAL CON PASAS", "descripcion":"", "imagen":"https://i.ibb.co/x3S0MNs/MIX-TROPICAL-CON-PASAS-1.jpg", "categoria":"FRUTOS-SECOS", "precio":2000, "stock": 6000},
+    {"index":9, "nombre":"MIX TROPICAL SIN PASAS", "descripcion":"", "imagen":"https://i.ibb.co/M5RFLxp/MIX-TROPICAL-SIN-PASAS-1.jpg", "categoria":"FRUTOS-SECOS", "precio":2000, "stock": 6000}
+    
+
+   
+]
