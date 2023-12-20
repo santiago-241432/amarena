@@ -40,24 +40,16 @@ const Cart = () =>{
     
 
     return(
-        <div className="col">
+        <div className="container my-5">
             <div className="row">
                 
-                <div className="col-md-10 ">
+                <div className="col-md-12 text-center ">
 
-                    <table className="table table-bordered border border-black m-3 ">
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>TOTAL A PAGAR</td>
-                            <td>${cartSumaTotal()}</td>
-                            <td><button className="btn m-3 btn-outline-dark"onClick={() =>{clear()}}>VACIAR CARRITO</button></td>
-                        </tr>
+                    <table className="table ">
 
                         {
                             Cart.map(item=>(
-                            <tr className="bg-white" key={item.index}>
+                            <tr className="bg-white border border-black" key={item.index}>
                                 <td><img src={item.imagen} alt={item.nombre} width={200}   /></td>
                                 <td>{item.nombre}</td>
                                 <td>{item.quantity} X {item.precio}</td>
@@ -67,11 +59,21 @@ const Cart = () =>{
                                 </svg></Link></td>
                             </tr>))
                         }
+
+                            <tr className="border-0">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>${cartSumaTotal()}</td>
+                                <td><button className="btn m-3 btn-outline-dark"onClick={() =>{clear()}}>VACIAR CARRITO</button></td>
+                            </tr>
                     </table>
-                        
-                    <h1 className="col-md-12 text-start m-3">COMPLETAR ORDEN</h1>    
+                    
+                    <div className="col-md-4 bg-white border border-black">    
+                    
+                        <h1>COMPLETAR ORDEN</h1>    
                       
-                    <div className="col-md-4 m-3 bg-white border border-black">
+                    
                         <form>
                         <div className="mb-3 ">
                                 <label htmlFor="nombre" className="form-label">Nombre</label>
@@ -82,7 +84,7 @@ const Cart = () =>{
                                 <input type="text" className="form-control" id="email"onInput={(e) => {setEmail(e.target.value)}}/>
                             </div>
                             <div class="mb-3">
-                                <label htmlFor="telefono" class="form-label">Telefono</label>
+                                <label htmlFor="telefono" className="form-label">Telefono</label>
                                 <input type="text" className="form-control" id="telefono"onInput={(e) => {setTelefono(e.target.value)}}/>
                             </div>
                             
