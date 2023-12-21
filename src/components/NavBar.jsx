@@ -10,9 +10,11 @@ const NavBar = () =>{
           <NavLink className="amarena" to={"/"}><img className="logo" src={logo} alt={"logo"}/></NavLink>
             <nav className="nav">
 
-              <label htmlFor="menu"/>
+              
+              <label htmlFor="menu">
                 <img src={list} className="img" alt={"lista"}/> 
-              <input type="checkbox"  id="menu"/>
+              </label>
+              <input type="checkbox" id="menu"/>
               
 
               <div className="lista">

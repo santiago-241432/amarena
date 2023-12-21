@@ -103,11 +103,9 @@
     .img{display:block}
 
     
-    .label, #menu{
-        display:block;
+    #menu{
+        display:none;
     }
-
-    
 
     
     .nav{
@@ -148,15 +146,25 @@
 @media (max-width: 745px){
     .imagen{
         margin:auto;
-        width: 300px;
-        height: 200px;
+        width: 200px;
+        height: auto;
         
         
         
     }
     }
 
+/*imagen carrito*/
 
+@media (max-width: 745px){
+    .imagen-carrito{
+        width: 100px;
+        height:auto;
+        
+        
+        
+    }
+    }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
