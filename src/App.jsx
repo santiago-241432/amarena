@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Seguinos from "./components/Seguinos"
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
               <Route path ={"/thankyou/:orderID"} element={<ThankYou/>} />
               <Route path ={"*"} element={<Error404/>} />
             </Routes>
+          <Seguinos/>
           <Footer/>
         </div>
       </BrowserRouter>
