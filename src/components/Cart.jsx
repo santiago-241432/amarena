@@ -32,6 +32,7 @@ const Cart = () =>{
                     
                     <div className="col-md-12 alert text-center alert-secondary" role="alert">
                         <h1>NO SE AGREGARON PRODUCTOS AL CARRITO</h1>
+                        <Link to={"/"} type="button" className="btn m-3 btn-outline-dark">VOLVER AL MENU PRINCIPAL</Link>
                     </div>
                 </div>
             </div>
@@ -66,6 +67,8 @@ const Cart = () =>{
                                 <td></td>
                             </tr>
                     </table>
+
+                    <Link to={"/"} type="button" className="btn m-3 btn-outline-dark btn-light">VOLVER AL MENU PRINCIPAL</Link>
                     
                     <div className="col-md-4 bg-white border border-black">    
                     
