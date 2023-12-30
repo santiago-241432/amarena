@@ -16,7 +16,19 @@ const Cart = () =>{
         const fecha = new Date();
         const date = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:${fecha.getMinutes()}`;
         const order = { buyer:buyer, items:Cart, date:date, total:cartSumaTotal()};
+        
+            if(nombre.length === 0){
+                return false;
+            }
 
+            if(email.length === 0){
+                return false;
+            }
+
+            if(telefono.length === 0){
+                return false;
+            }
+            
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
         addDoc(ordersCollection, order).then(data =>{
@@ -24,6 +36,8 @@ const Cart = () =>{
             //clear();
          })
     };
+
+    
 
     if(cartTotal() === 0){
         return(
@@ -74,6 +88,7 @@ const Cart = () =>{
                     
                         <h1>COMPLETAR ORDEN</h1>    
                       
+                        <p>DEBE COMPLETAR TODOS LOS CAMPOS</p>
                     
                         <form>
                         <div className="mb-3 ">
