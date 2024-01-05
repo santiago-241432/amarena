@@ -22,7 +22,7 @@ const ItemDetail = ({item}) =>{
                 <p className="card-text">{item.descripcion}</p>
                 <p className="card-text">{item.preciox100gramos}</p>
                 <ItemCount stock ={item.stock} onAdd={onAdd} />
-                <Link to={"/"} type="button" className="btn m-3 btn-outline-dark">VOLVER AL MENU PRINCIPAL</Link>
+                <Link to={"/"} type="button" className="btn m-3 btn-outline-dark">VOLVER AL MENÚ PRINCIPAL</Link>
             </div>
         </div>
     );

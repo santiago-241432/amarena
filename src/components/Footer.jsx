@@ -6,8 +6,8 @@ const Footer = () =>{
         <footer id="footer">
       
             <div >
-            <a href={"/"}><img src={whatsapp} alt={"whatsapp"} className="icono" /></a>
-            <a href={"/"}><img src={ig} alt={"ig"} className="icono" /></a>
+            <a href="https://www.whatsapp.com"><img src={whatsapp} alt={"whatsapp"} className="icono" /></a>
+            <a href="https://www.instagram.com/amarenatiendaorganica"><img src={ig} alt={"ig"} className="icono" /></a>
             
             </div>
         </footer>

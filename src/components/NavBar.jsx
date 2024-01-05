@@ -18,9 +18,9 @@ const NavBar = () =>{
               
 
               <div className="lista">
-                <NavLink className="items" activeClassName={"active"} to={"/category/FRUTOS-SECOS"} >FRUTOS SECOS</NavLink>    
-                <NavLink className="items" activeClassName={"active"} to={"/category/CEREALES"}>CEREALES</NavLink>
-                <NavLink className="items" activeClassName={"active"} to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
+                <NavLink className="items" to={"/category/FRUTOS-SECOS"} >FRUTOS SECOS</NavLink>    
+                <NavLink className="items" to={"/category/CEREALES"}>CEREALES</NavLink>
+                <NavLink className="items" to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
               <div >
                 <CartWidget />
               </div>   
