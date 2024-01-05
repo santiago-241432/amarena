@@ -90,7 +90,9 @@ const Cart = () =>{
                       
                         <h2>DEBE COMPLETAR TODOS LOS CAMPOS</h2>
 
-                        <p>SOLO ENVIOS A DOMICILIO, NOS COMUNICAREMOS VIA WHATSAPP PARA COORDINAR EL PEDIDO</p>
+                        <h3>SOLO ENVIOS A DOMICILIO</h3>
+                        
+                        <p>NOS COMUNICAREMOS VIA WHATSAPP PARA COORDINAR EL ENVIO, LOS DIAS HÁBILES DE 8 a 20 HS</p>
                     
                         <form>
                         <div className="mb-3 ">
