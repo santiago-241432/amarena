@@ -10,24 +10,37 @@ const Cart = () =>{
     const[telefono, setTelefono] = useState("");
     const[orderID, setOrderID] = useState("");
     const {Cart, cartTotal, removeItem, clear, cartSumaTotal} = useContext(CartContext);
+    const [errorMessageNombre, setErrorMessageNombre] = useState('');
+    const [errorMessageMail, setErrorMessageMail] = useState('');
+    const [errorMessageTelefono, setErrorMessageTelefono] = useState('');
+
+
+
+    
 
     const generarOrden =() =>{
         const buyer = {name:nombre, email:email, telefono:telefono};
         const fecha = new Date();
         const date = `${fecha.getFullYear()}-${fecha.getMonth() + 1}-${fecha.getDate()} ${fecha.getHours()}:${fecha.getMinutes()}`;
         const order = { buyer:buyer, items:Cart, date:date, total:cartSumaTotal()};
+
         
             if(nombre.length === 0){
+                setErrorMessageNombre("Por favor, completa el campo de nombre");
                 return false;
             }
 
             if(email.length === 0){
+                setErrorMessageMail("Por favor, completa el campo de email");
                 return false;
             }
 
             if(telefono.length === 0){
+                setErrorMessageTelefono("Por favor, completa el campo de telefono"); 
                 return false;
             }
+
+            
             
         const db = getFirestore();
         const ordersCollection = collection(db, "orders");
@@ -74,7 +87,7 @@ const Cart = () =>{
                         }
 
                             <tr className="border-0">
-                                <td></td>
+                                <td><button className="m-3">TOTAL</button></td>
                                 <td>${cartSumaTotal()}</td>
                                 <td><button className="btn m-3 btn-outline-dark"onClick={() =>{clear()}}>VACIAR CARRITO</button></td>
                                 <td></td>
@@ -94,22 +107,31 @@ const Cart = () =>{
                         
                         <p>NOS COMUNICAREMOS VIA WHATSAPP PARA COORDINAR EL ENVIO, LOS DIAS HÁBILES DE 8 a 20 HS</p>
                     
-                        <form>
+                        <form id="formulario">
                         <div className="mb-3 ">
                                 <label htmlFor="nombre" className="form-label">Nombre</label>
                                 <input type="text" className="form-control" id="nombre" onInput={(e) => {setNombre(e.target.value)}}/>
+                                {errorMessageNombre && <p style={{ color: 'red' }}>{errorMessageNombre}</p>}    
                             </div>
+            
                             <div class="mb-3">
                                 <label htmlFor="email" className="form-label">Email</label>
                                 <input type="text" className="form-control" id="email"onInput={(e) => {setEmail(e.target.value)}}/>
+                                {errorMessageMail && <p style={{ color: 'red' }}>{errorMessageMail}</p>} 
                             </div>
+                            
                             <div class="mb-3">
                                 <label htmlFor="telefono" className="form-label">Telefono</label>
                                 <input type="text" className="form-control" id="telefono"onInput={(e) => {setTelefono(e.target.value)}}/>
+                                {errorMessageTelefono && <p style={{ color: 'red' }}>{errorMessageTelefono}</p>} 
                             </div>
+                            
                             
                             <button type="button" className="btn m-3 btn-outline-dark" onClick={generarOrden}>Generar Orden</button>
                         </form>
+
+                        
+
                     </div> 
                     
                 </div>
