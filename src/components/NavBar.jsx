@@ -9,7 +9,6 @@ const NavBar = () =>{
   const [menuChecked, setMenuChecked] = useState(false);
 
   const handleNavLinkClick = () => {
-    // Cambia el estado del checkbox al hacer clic en un enlace de la lista
     setMenuChecked(false);
   };
 
