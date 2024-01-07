@@ -30,7 +30,7 @@ const NavBar = () =>{
                 <NavLink className="items" to={"/category/CEREALES"} onClick={handleNavLinkClick}>CEREALES</NavLink>
                 <NavLink className="items" to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"} onClick={handleNavLinkClick}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
               <div >
-                <CartWidget />
+                <CartWidget onClick={handleNavLinkClick}/>
               </div>   
               </div> 
               
