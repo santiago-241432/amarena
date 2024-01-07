@@ -23,15 +23,15 @@ const NavBar = () =>{
                 <img src={list} className="img" alt={"lista"}/> 
               </label>
               <input type="checkbox" id="menu" checked={menuChecked} onChange={() => setMenuChecked(!menuChecked)}/>
-              
+              <div >
+                <CartWidget/>
+              </div>  
 
               <div className="lista">
                 <NavLink className="items" to={"/category/FRUTOS-SECOS"} onClick={handleNavLinkClick} >FRUTOS SECOS</NavLink>    
                 <NavLink className="items" to={"/category/CEREALES"} onClick={handleNavLinkClick}>CEREALES</NavLink>
                 <NavLink className="items" to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"} onClick={handleNavLinkClick}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
-              <div >
-                <CartWidget onClick={handleNavLinkClick}/>
-              </div>   
+               
               </div> 
               
             </nav>
