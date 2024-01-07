@@ -15,11 +15,10 @@ const NavBar = () =>{
     return(
       <div id="header">
         <div className="encabezado"> 
+          <CartWidget/>
           <NavLink className="amarena" to={"/"}><img className="logo" src={logo} alt={"logo"}/></NavLink>
-              <div >
-                <CartWidget/>
-              </div>  
-            <nav className="nav">
+              
+              <nav className="nav">
 
               
               <label htmlFor="menu">
