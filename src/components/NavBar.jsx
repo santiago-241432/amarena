@@ -2,8 +2,17 @@ import CartWidget from "./CartWidget";
 import list from "./images/list.png";
 import logo from "./images/LOGO AMARENA.png";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const NavBar = () =>{
+
+  const [menuChecked, setMenuChecked] = useState(false);
+
+  const handleNavLinkClick = () => {
+    // Cambia el estado del checkbox al hacer clic en un enlace de la lista
+    setMenuChecked(false);
+  };
+
     return(
       <div id="header">
         <div className="encabezado"> 
@@ -14,13 +23,13 @@ const NavBar = () =>{
               <label htmlFor="menu">
                 <img src={list} className="img" alt={"lista"}/> 
               </label>
-              <input type="checkbox" id="menu"/>
+              <input type="checkbox" id="menu" checked={menuChecked} onChange={() => setMenuChecked(!menuChecked)}/>
               
 
               <div className="lista">
-                <NavLink className="items" to={"/category/FRUTOS-SECOS"} >FRUTOS SECOS</NavLink>    
-                <NavLink className="items" to={"/category/CEREALES"}>CEREALES</NavLink>
-                <NavLink className="items" to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
+                <NavLink className="items" to={"/category/FRUTOS-SECOS"} onClick={handleNavLinkClick} >FRUTOS SECOS</NavLink>    
+                <NavLink className="items" to={"/category/CEREALES"} onClick={handleNavLinkClick}>CEREALES</NavLink>
+                <NavLink className="items" to={"/category/CHOCOLATES-Y-GARRAPIÑADAS"} onClick={handleNavLinkClick}>CHOCOLATES Y GARRAPIÑADAS</NavLink>
               <div >
                 <CartWidget />
               </div>   
