@@ -14,7 +14,8 @@ const NavBar = () =>{
 
     return(
       <div id="header">
-        <div className="encabezado"> 
+        <div className="encabezado">
+          <CartWidget/> 
           
           <NavLink className="amarena" to={"/"}><img className="logo" src={logo} alt={"logo"}/></NavLink>
               
@@ -25,7 +26,7 @@ const NavBar = () =>{
                 <img src={list} className="img" alt={"lista"}/> 
               </label>
               <input type="checkbox" id="menu" checked={menuChecked} onChange={() => setMenuChecked(!menuChecked)}/>
-              <CartWidget/>
+              
 
               <div className="lista">
                 <NavLink className="items" to={"/category/FRUTOS-SECOS"} onClick={handleNavLinkClick} >FRUTOS SECOS</NavLink>    
