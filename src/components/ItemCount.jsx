@@ -40,7 +40,7 @@ const ItemCount = ({stock, onAdd}) =>{
         <div className="container">
             <div className="row">
                 <div className="col">
-                    {itemAdded ? "":<div class="btn-group global" role="group" aria-label="Basic outlined example">
+                    {itemAdded ? "":<div className="btn-group global" role="group" aria-label="Basic outlined example">
                         <button className="btn btn-outline-dark" onClick={decrementar}>-</button>
                         <button className="btn">{items} Gramos</button>
                         <button className="btn btn-outline-dark" onClick={incrementar}>+</button>
